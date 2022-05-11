@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Get picklist values of Status field" icon-name="standard:user">
+        <div class="slds-m-around_medium">
+          <template if:true={StatusPicklist.data}>
+             <lightning-combobox name="Select Status" 
+                                 label="Select Status"  
+                                 value={value1}
+                                 options={StatusPicklist.data.values}     
+                                 onchange={handleChange}>
+             </lightning-combobox>
+          </template>
+         <!-- <p>Selected value is: {value1}</p>-->
+        </div>
+    </lightning-card>
+    
+</template>
