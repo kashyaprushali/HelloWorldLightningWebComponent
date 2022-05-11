@@ -1,0 +1,26 @@
+<template>
+    <div class="slds-grid slds-wrap slds-size_12-of-12">
+        <div class="slds-col slds-size_6-of-12">
+     <label for="FieldSelect" class="slds-form-element__label slds-no-flex">
+    <abbr title="required" class="slds-required">*</abbr>
+    Country
+</label>
+<select class="slds-select" name="optionSelect" onchange={handelclick} >
+    <option value="None">--None--</option>
+    <option value="India">INDIA</option>
+    <option value="USA">USA</option>
+</select> 
+ </div>
+ <div class="slds-col slds-size_6-of-12">
+<label for="FieldSelect" class="slds-form-element__label slds-no-flex">
+    <abbr title="required" class="slds-required">*</abbr>
+    State
+</label>
+<select class="slds-select cityoo" name="optionSelect1">
+    <template for:each={stateName} for:item="state">
+        <option value={state} key={fg}>{state}</option>
+    </template>
+</select>
+</div>
+</div>
+</template>

@@ -1,3 +1,22 @@
 <template>
-    
+    <lightning-card>
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large"> 
+                <template for:each={rsd} for:item="column">
+                    <tr key={column.id}><th> Subject</th></tr>
+                    <tr class="slds-text-title_caps"  key={column.id}>
+                        
+                            <td key={column.id}><div class="slds-truncate">{column.Subject} </div></td>
+                        </tr>
+                        <tr  key={column.id}><th key={column.id}>Description</th></tr>
+                        <tr key={column.id}> <td key={column.id}> {column.Description} </td></tr>
+                        </template>
+                    
+                    </table>
+            <div  class="slds-m-right_small slds-m-top_small" >
+            <lightning-button variant="success" 
+            label="Email Sent" title="Successful action" 
+            onclick={sendEmailAfterEvent} class="slds-m-right_small" >
+           </lightning-button>
+        </div>
+    </lightning-card>
 </template>

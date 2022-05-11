@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-tabs_card">
+        <span class="slds-icon_container slds-icon-standard-opportunity">
+            <lightning-icon icon-name="standard:recipe" alternative-text="recipe" title="recipe"></lightning-icon>
+       </span>
+       <div class="slds-page-header__name-title">
+        <h1>
+            <span>Call Parent Method From Child Component LWC</span>
+            <span class="slds-page-header__title slds-truncate" title="Recently Viewed">TechDicer</span>
+        </h1>
+    </div>
+    </div>
+    <lightning-card  variant="Narrow"  title="Parent Component" icon-name="standard:account">
+        <div class="slds-p-horizontal_small">
+            <h1>Name : {Name}</h1>
+            <h1>City : {City}</h1>
+        </div>
+    </lightning-card> 
+    <br/>
+    
+    <c-child-Component onchildmethod={callFromChild}></c-child-Component>
+    
+    
+</template>
